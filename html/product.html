@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang chủ</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/product.css" />
+    <script src="../js/main.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div id="header"></div>
+      <div class="section-one">
+        <div class="info">
+          <p class="info-title" style="text-transform: uppercase">PRODUCT</p>
+          <p class="info-sub-title">
+            PRODUCT
+
+            <br />
+            <a href="home.html" class="white-link">Home</a>
+            <span class="dot">•</span>
+
+            <a href="product.html" class="white-link">Product</a>
+          </p>
+        </div>
+      </div>
+      <div class="container" id="container">
+        <ul class="list-product-one" id="list-product-one"></ul>
+        <div class="section-five">
+          <div class="title">
+            <span>
+              Best Prices We Offer For <br />
+              Ice Cream Lovers
+            </span>
+          </div>
+          <ul class="list-product-one" id="list-product-two"></ul>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="footer-logo">
+          <img src="../hinh/logo1.jpg" alt="" />
+        </div>
+
+        <ul class="footer-social">
+          <li>
+            <a href="https://www.facebook.com/profile.php?id=61558635698061"
+              ><i class="fa-brands fa-facebook-f"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#"> <i class="fa-brands fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/happy_icream/"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#"> <i class="fa-brands fa-youtube"></i></a>
+          </li>
+          <li>
+            <a
+              href="https://www.tiktok.com/@happyicecream03?is_from_webapp=1&sender_device=pc"
+            >
+              <i class="fa-brands fa-tiktok"></i
+            ></a>
+          </li>
+        </ul>
+
+        <div class="footer-location">
+          <div class="location-1">
+            <h6>Get In Touch</h6>
+            <p>12 Nguyen Van Bao, Phuong 13, Go Vap</p>
+
+            <p>+843 7717 9344</p>
+          </div>
+          <div class="location-2">
+            <h6>Opening Hours</h6>
+            <p>Mon – Sat, 8AM – 5PM</p>
+
+            <p>Sunday: Closed</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script>
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("header").innerHTML = this.responseText;
+        }
+      };
+      xhttp.open("GET", "common/header.html", true);
+      xhttp.send();
+    </script>
+    <script type="module" src="../js/product.js"></script>
+  </body>
+</html>

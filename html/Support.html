@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+
+<head>
+  <meta charset="UTF-8">
+  <title>Chính sách hỗ trợ</title>
+  <link rel="stylesheet" href="../css/Support.css">
+  <!-- Boxicons CDN Link -->
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+
+
+
+<body>
+  <div class="accordion">
+    <div class="image-box">
+      <img src="https://cdn-icons-png.flaticon.com/512/10550/10550468.png">
+    </div>
+    <div class="accordion-text">
+      <div class="title">Support</div>
+      <ul class="faq-text">
+        <li>
+          <div class="question-arrow">
+            <span class="question">Payment policy</span>
+            <i class="bx bxs-chevron-down arrow"></i>
+          </div>
+          <p><b>Cash payment:</b> We also accept cash payment when you receive the goods. Please prepare enough cash for the
+            delivery staff when receiving the goods.</p>
+          <p style="margin-top: 20px;"><b>Payment via bank:</b> Please use the account information below to transfer:</p>
+          <p>- Bank: Agribank</p>
+          <p>- Account number: 1487213142873</p>
+          <p>- Account owner: Happy IceCream</p>
+          <p>Please note your order number when making the transfer.</p><span class="line"></span>
+        </li>
+        <li>
+          <div class="question-arrow">
+            <span class="question">Return policy</span>
+            <i class="bx bxs-chevron-down arrow"></i>
+          </div>
+          <p>We accept returns within 7 days from the date of purchase. Goods must be intact and unused. Please contact
+            our customer service for further details and instructions on the return process.</p>
+          <span class="line"></span>
+        </li>
+        <li>
+          <div class="question-arrow">
+            <span class="question">Refund policy</span>
+            <i class="bx bxs-chevron-down arrow"></i>
+          </div>
+          <p>We are committed to refunding money in case the product does not meet the requirements or there is a
+            technical problem on our part. Please contact customer service to request a refund and get more details
+            about the process.
+          </p>
+          <span class="line"></span>
+        </li>
+        <li>
+          <div class="question-arrow">
+            <span class="question">Loyal customer policy</span>
+            <i class="bx bxs-chevron-down arrow"></i>
+          </div>
+          <p><b>Promotions and incentives for regular customers:</b> We continuously offer programs
+            Special promotions and offers for regular customers.
+            This may include special discounts, free gifts, or other special offers of appreciation
+            customer support and loyalty.</p>
+          <p style="margin-top: 20px;"><b>Points and rewards system:</b> We provide a points system for
+            loyal customers, allowing them to accumulate points every time they make a purchase. These points can then be redeemed
+            rewards such as discounts, gifts, or other special offers. This points system helps customers
+            Customers feel appreciated and encouraged to continue shopping at our store.</p>
+          <span class="line"></span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+
+
+  <script>
+    let li = document.querySelectorAll(".faq-text li");
+    for (var i = 0; i < li.length; i++) {
+      li[i].addEventListener("click", (e) => {
+        let clickedLi;
+        if (e.target.classList.contains("question-arrow")) {
+          clickedLi = e.target.parentElement;
+        } else {
+          clickedLi = e.target.parentElement.parentElement;
+        }
+        clickedLi.classList.toggle("showAnswer");
+      });
+    }
+  </script>
+
+
+</body>
+
+
+</html>

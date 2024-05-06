@@ -1,0 +1,82 @@
+.section-one {
+  background-image: url(../hinh/bck4.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 400px;
+  animation: slide 60s linear infinite;
+}
+.fa-solid {
+  color: #f00;
+}
+
+.info {
+  display: block;
+}
+.info p {
+  margin-bottom: 110px;
+}
+.info-title {
+  font-size: 20px;
+  color: white;
+}
+.info-sub-title {
+  font-size: 70px;
+  color: white;
+  font-weight: 600;
+  font-style: bold;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Trong file product.css */
+
+.product {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.product:hover {
+  transform: scale(1.1); /* Phóng to sản phẩm khi rê chuột vào */
+}
+
+.product.zoom {
+  z-index: 2;
+  transform: scale(1.5); /* Khi sản phẩm được phóng to */
+  transition: transform 0.3s ease;
+}
+.white-link {
+  color: white; /* Đặt màu chữ thành màu trắng */
+  text-decoration: none; /* Loại bỏ gạch chân dưới liên kết */
+}
+
+.white-link:hover {
+  text-decoration: underline; /* Hiển thị gạch chân dưới liên kết khi rê chuột qua */
+}
+.dot {
+  margin: 0 5px; /* Điều chỉnh khoảng cách giữa dấu chấm và các liên kết */
+}
+.order-now {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.order-now i {
+  margin-left: 10px; /* Để tạo khoảng cách giữa các trái tim */
+}
+
+.order-now {
+  margin-bottom: 20px; /* Khoảng cách với trái tim phía dưới */
+}
+.hearts {
+  margin-top: 25px; /* Khoảng cách trên của dòng trái tim */
+}
+.fa-heart {
+  transition: transform 0.3s; /* Thêm hiệu ứng chuyển động */
+}
+
+.fa-heart:hover {
+  transform: scale(2); /* Phóng to trái tim khi hover */
+}

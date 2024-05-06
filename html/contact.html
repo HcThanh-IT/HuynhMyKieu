@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <link rel="stylesheet" href="../css/contact.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <script src="../js/contact.js"></script>
+</head>
+<body>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="../css/contact.css" />
+  </head>
+  
+    <style>
+  @import url('https://fonts.googleapis.com/css?family=Yantramanav:100,300');
+  
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-image: url(../hinh/bckk.png);
+    color: #000000;
+    line-height: 1.6;
+    font-family: 'Yantramanav', sans-serif;
+    padding: 1em;
+  }
+  
+  .container {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+    
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .brand {
+    text-align: center;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: 0%;
+  }
+  
+  .brand span {
+    color: #000000;
+    font-weight: bold;
+  }
+  
+  .wrapper {
+    box-shadow: 0 0 20px 0 rgb(210, 205, 205);
+    
+  }
+  
+  .wrapper > * {
+    padding: 1em;
+  }
+  
+  /* ------------------- */
+  /* COMPANY INFORMATION */
+  /* ------------------- */
+  
+  .company-info {
+    /* background: #b0f2f5; */
+    background-image: url(../hinh/ct.png);
+    background-size: 10cm 14cm;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  
+  .company-info h3,
+  .company-info ul {
+    text-align: center;
+    margin: 0 0 1rem 0;
+  }
+  
+  /* ------- */
+  /* CONTACT */
+  /* ------- */
+  
+  .contact {
+    background: #ffffff;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  
+  /* ---- */
+  /* FORM */
+  /* ---- */
+  
+  .contact form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    
+  }
+  
+  .contact form label {
+    display: block;
+  }
+  
+  .contact form p {
+    margin: 0;
+  }
+  
+  .contact form .full {
+    grid-column: 1 / 3;
+  }
+  
+  .contact form button,
+  .contact form input,
+  .contact form textarea {
+    width: 100%;
+    padding: 1em;
+    border: solid 1px #ababab;
+    border-radius: 20px;
+  }
+  
+  .contact form textarea {
+    resize: none;
+  }
+  
+  .contact form button {
+    background: #62c3e7;
+    border: 0;
+    color: #e4e4e4;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .contact form button:hover,
+  .contact form button:focus {
+    background: #57b5d7(61, 86, 170);
+    color: #ffffff;
+    outline: 0;
+    transition: background-color 2s ease-out;
+  }
+  
+  /* ------------- */
+  /* MEDIA QUERIES */
+  /* ------------- */
+  
+  @media only screen and (min-width: 700px) {
+    .wrapper {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+    }
+  
+    .wrapper > * {
+      padding: 2em;
+    }
+  
+    .company-info {
+      border-radius: 4px 0 0 4px;
+    }
+  
+    .contact {
+      border-radius: 0 4px 4px 0;
+    }
+  
+    .company-info h3,
+    .company-info ul,
+    .brand {
+      text-align: left;
+    }
+  }
+
+  .btn .back{
+    width: 140px;
+    height: 45px;
+    margin-left: 90%;
+    background-color: #62c3e7; 
+    border: solid 1px #ababab;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    border-radius: 15px;
+    text-decoration: none;
+    
+}
+.btn .back :hover{
+   background-color: #a3d4e6;
+}
+.back {
+    text-decoration: none;
+    /* Loại bỏ gạch chân dưới liên kết */
+}
+
+.back {
+    text-decoration: underline;
+    /* Hiển thị gạch chân dưới liên kết khi rê chuột qua */
+}
+
+.icon li a {
+  margin-left: 95%;
+  font-size: 30px;
+  color: #726969;
+}
+.required {
+    color: red; /* Thiết lập màu đỏ */
+    float: right;
+}
+
+    </style>
+  <body>
+
+  <ul class="icon">
+    <li>
+        <a href="./index.html"><i class="fa-solid fa-arrow-right-to-bracket"></i></a>
+    </li>
+  <div class="container">  
+    <h1 class="brand"><span>CONTACT US</span></h1>
+  
+    <div class="wrapper">
+  
+      <!-- COMPANY INFORMATION -->
+      <div class="company-info">
+      </div>
+      <!-- End .company-info -->
+  
+      <!-- CONTACT FORM -->
+      <div class="contact">
+        <h3>E-mail Us</h3>
+  
+        <form id="contact-form">
+  
+          <p>
+            <label>Name</label><span class="required"style="float: left; margin-left: 5px;">*</span>
+            <input type="text" name="name" id="name" required>
+            
+          </p>
+  
+          <p>
+            <label>E-mail Address</label><span class="required"style="float: left; margin-left: 5px;">*</span>
+            <input type="email" name="email" id="email" required>
+          </p>
+  
+          <p>
+            <label>Company</label>
+            <input type="text" name="company" id="company"  >
+          </p>
+  
+          <p>
+            <label >Phone Number</label>
+            <input type="tel" name="phone" id="phone">
+          </p>
+  
+          <p class="full">
+            <label>Message</label>
+            <textarea name="message" rows="5" id="message"></textarea>
+          </p>
+  
+          <p class="full">
+            <button id="submit-contact">Submit</button>
+          </p>
+          <!-- <div id="successMessage" style="display: block; text-align: center; width: 100%;">Bạn đã phản hồi thành công!</div>   -->
+        </form>
+      </div>
+  
+    </div>
+  </div>
+   
+</div>
+  </body>
+  </html>  
+</body>
+<script>
+  const nameEle = document.getElementById('name');
+const emailEle = document.getElementById('email');
+const phoneEle = document.getElementById('phone');
+
+const btnSubmit = document.querySelector('button[type="submit"]');
+const inputEles = document.querySelectorAll('input, textarea');
+
+btnSubmit.addEventListener('click', function(event) {
+    event.preventDefault(); // Ngăn chặn việc gửi biểu mẫu mặc định
+
+    Array.from(inputEles).forEach(function(ele) {
+        ele.classList.remove('success', 'error');
+    });
+    let isValid = checkValidate();
+
+if (isValid) {
+    document.getElementById('successMessage').style.display = 'block';
+    document.getElementById('contact-form').reset();
+}
+});    
+</script>
+</html>

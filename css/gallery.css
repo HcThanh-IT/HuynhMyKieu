@@ -1,0 +1,249 @@
+/*section-one*/
+.section-one {
+  background-image: url(../hinh/bck1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 400px;
+  animation: slide 60s linear infinite;
+  /* Áp dụng animation slide, mỗi vòng 30 giây và lặp vô hạn */
+}
+
+.info {
+  display: block;
+  height: 400px;
+}
+
+.info p {
+  margin-bottom: 110px;
+}
+
+.info-title {
+  font-size: 20px;
+  color: white;
+}
+
+.info-sub-title {
+  font-size: 40px;
+  color: white;
+  font-weight: 600;
+  font-style: bold;
+  align-items: center;
+  justify-content: center;
+}
+
+.white-link {
+  color: white;
+  /* Đặt màu chữ thành màu trắng */
+  text-decoration: none;
+  /* Loại bỏ gạch chân dưới liên kết */
+}
+
+.white-link:hover {
+  text-decoration: underline;
+  /* Hiển thị gạch chân dưới liên kết khi rê chuột qua */
+}
+
+/* --------------------- */
+
+.section-five {
+  margin-top: 20px; /* Khoảng cách với phần trên */
+  float: left; /* Đẩy sang bên trái */
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px; /* Set height to 100% of the viewport height */
+}
+
+.title {
+  text-align: center;
+}
+/* CSS */
+.section-a nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+  margin-top: 0;
+  display: flex; /* Dàn hàng ngang */
+  justify-content: center; /* Canh giữa tiêu đề */
+}
+
+.section-a nav ul li {
+  margin-right: 10px; /* Khoảng cách giữa các mục */
+}
+
+.section-a nav ul li a {
+  display: block;
+  padding: 8px 15px;
+  text-decoration: none;
+  color: #e67599;
+  border: 2px solid #e67599; /* Khung bo tròn */
+  border-radius: 20px; /* Bo tròn góc */
+}
+
+/* .section-a nav ul li a:hover {
+  background-color: #e67599;
+  color: #333;
+} */
+.image {
+  width: 100%; /* Giữ nguyên tỉ lệ chiều rộng/chiều cao */
+  height: 90%;
+}
+body {
+  padding: 0px;
+  font-family: sans-serif;
+  background: #f2f2f2;
+}
+img {
+  width: 100%; /* need to overwrite inline dimensions */
+  height: 100%;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 1em;
+  width: 1110px;
+}
+
+/* hover styles */
+.location-listing {
+  position: relative;
+  width: 370px;
+  height: 260px;
+}
+
+.location-image {
+  line-height: 0;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+.location-image img {
+  filter: blur(0px);
+  transition: filter 0.3s ease-in;
+  transform: scale(1.1);
+}
+
+.location-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: none;
+  z-index: 1;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s;
+  color: black;
+  /* position the text in t’ middle*/
+  display: flex;
+  font-size: 60px;
+  align-items: center;
+  justify-content: center;
+}
+.btn-tab {
+  border-radius: 999px;
+  padding: 12px 24px;
+  border: 1px solid #f195b2;
+  color: #f195b2;
+}
+
+.btn-tab:focus {
+  color: black;
+  background-color: #f195b2;
+}
+.location-border .fa-plus {
+  font-size: 62px;
+  color: black;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.location-listing:hover .location-title {
+  opacity: 1;
+}
+
+.location-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 12;
+  width: 100%;
+  padding: 30px;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+.active {
+  color: black;
+  background-color: #e67599;
+}
+.location-border .item {
+  border: 2px solid #fff;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  transition: 0.3s;
+  box-sizing: border-box;
+}
+
+.location-border .item:hover {
+  transition: 0.3s;
+  background-color: #ffffff;
+}
+.location-border .item:hover .fa-plus {
+  opacity: 1;
+}
+
+.location-listing:hover .location-image img {
+  /* filter: blur(2px); */
+}
+
+/* for touch screen devices */
+@media (hover: none) {
+  .location-title {
+    opacity: 1;
+  }
+  .location-image img {
+    filter: blur(2px);
+  }
+}
+
+.grid-container {
+  margin: 0 auto; /* Canh giữa đoạn mã */
+}
+
+/* CSS cho phần tử nav */
+/* CSS để đẩy phần tử nav lên trên */
+.gallery-nav {
+  margin-top: -100px; /* Đẩy phần tử này lên trên 10px */
+}
+
+.image-gallery {
+  display: grid; /* Sử dụng Grid Layout */
+  grid-template-columns: repeat(3, 1fr); /* Tạo 3 cột có chiều rộng bằng nhau */
+  gap: 20px; /* Khoảng cách giữa các cột */
+}
+
+.image-gallery section {
+  border: 1px solid #ccc; /* Đóng khung border */
+  padding: 20px; /* Khoảng cách bên trong mỗi phần tử */
+}
+
+.image-gallery img {
+  width: 100%; /* Đảm bảo ảnh sẽ căn chỉnh theo kích thước của phần tử cha */
+  height: auto; /* Giữ tỷ lệ khung hình */
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
