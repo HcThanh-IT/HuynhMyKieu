@@ -217,33 +217,30 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-/* .about{
-  
-} */
-
-/* .info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  height: 900px;
-}
-.info p {
-  margin-bottom: 20px;
-}
-.info-title {
-  font-size: 20px;
+}.button-header{
+  width: 200px;
+  height: 60px;
   color: white;
+  border: none;
+  border-radius: 60px;
+  cursor: pointer;
+  background-color: var(--color-hong);
 }
-.info-sub-title {
-  font-size: 72px;
+.button{
+  width: 140px;
+  height: 45px;
   color: white;
-  font-weight: 600;
-  font-style: bold;
-} */
-.button {
+  border: none;
+  border-radius: 60px;
+  cursor: pointer;
+}
+.button-xanh{
+  background-color: var(--color-xanh);
+}
+.button-hong{
+  background-color: var(--color-hong);
+}
+/* .button {
   width: 200px;
   height: 60px;
   background-color: var(--color-hong);
@@ -255,7 +252,28 @@ html {
 
 .button:hover {
   background-color: #e67599;
+} */
+
+/* .button-xanh {
+  width: 140px;
+  height: 45px;
+  background-color: var(--color-xanh);
+  margin-top: 30px;
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 70px);
 }
+.button-xanh:hover {
+  background-color: #4fbbe3;
+}
+.button-hong {
+  width: 140px;
+  height: 45px;
+  margin-left: 30px;
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 70px - 15px);
+} */
 
 /* section-two */
 .section-two {
@@ -310,26 +328,7 @@ html {
 .content-img {
   width: 30%;
 }
-.button-xanh {
-  width: 140px;
-  height: 45px;
-  background-color: var(--color-xanh);
-  margin-top: 30px;
-  position: absolute;
-  bottom: 50px;
-  left: calc(50% - 70px);
-}
-.button-xanh:hover {
-  background-color: #4fbbe3;
-}
-.button-hong {
-  width: 140px;
-  height: 45px;
-  margin-left: 30px;
-  position: absolute;
-  bottom: 50px;
-  left: calc(50% - 70px - 15px);
-}
+
 
 .content-img img {
   width: 100%;
