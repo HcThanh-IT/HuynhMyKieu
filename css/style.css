@@ -179,6 +179,11 @@ html {
   justify-content: center;
   align-items: center;
 }
+.info{
+  text-align: center;
+  color: #fff;
+  font-weight: 600;
+}
 .section-one .info-title{
   font-size: 24px;
 }
@@ -216,12 +221,7 @@ html {
 /* .about{
   
 } */
-.info{
-  /* margin-top: 100px; */
-  text-align: center;
-  color: #fff;
-  font-weight: 600;
-}
+
 /* .info {
   display: flex;
   flex-direction: column;
