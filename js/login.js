@@ -85,9 +85,9 @@ btnRegister.addEventListener("click", function (event) {
   listUser.push(user);
   localStorage.setItem("users", JSON.stringify(listUser));
   alert("Đăng ký thành công!");
-  window.location.href = "../html/home.html";
+  window.location.href = "../index.html";
 });
-
+console.log(listUser);
 btnLogin.addEventListener("click", function (event) {
   event.preventDefault();
   let users = JSON.parse(localStorage.getItem("users"));
@@ -107,6 +107,6 @@ btnLogin.addEventListener("click", function (event) {
   if (email === user.email || password === user.password) {
     localStorage.setItem("isLogin", true);
     alert("Đăng nhập thành công!!");
-    window.location.href = "../html/home.html";
+    window.location.href = "../index.html";
   }
 });
