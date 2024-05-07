@@ -590,10 +590,6 @@ html {
   align-items: center;
 }
 
-.button-hong {
-  margin-left: 0px;
-  position: absolute;
-}
 .section-five {
   margin-top: 100px;
 }
@@ -723,7 +719,9 @@ html {
   align-items: center;
   justify-content: center;
 }
-
+.chef-sub-info {
+  transition: color 0.3s, transform 0.3s;
+}
 .chef-sub-info:hover {
   color: var(--color-hong);
   transform: scale(1.2);
