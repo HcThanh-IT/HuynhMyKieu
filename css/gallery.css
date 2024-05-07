@@ -8,7 +8,7 @@
   /* Áp dụng animation slide, mỗi vòng 30 giây và lặp vô hạn */
 }
 
-.info {
+/* .info {
   display: block;
   height: 400px;
 }
@@ -29,7 +29,7 @@
   font-style: bold;
   align-items: center;
   justify-content: center;
-}
+} */
 
 .white-link {
   color: white;
