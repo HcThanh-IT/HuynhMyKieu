@@ -1,11 +1,6 @@
 /*section-one*/
-.section-one {
+.bg-header {
   background-image: url(../hinh/bck1.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 400px;
-  animation: slide 60s linear infinite;
-  /* Áp dụng animation slide, mỗi vòng 30 giây và lặp vô hạn */
 }
 
 /* .info {

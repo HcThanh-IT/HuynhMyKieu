@@ -1,10 +1,6 @@
 /*service*/
-.service {
+.bg-header {
     background-image: url(../hinh/bck6.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 400px; 
-    animation: slide 60s linear infinite;
   }
 /*   
   .info {

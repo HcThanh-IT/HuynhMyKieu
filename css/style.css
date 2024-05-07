@@ -208,7 +208,7 @@ html {
     animation: slide 10s infinite;
 } */
 .bg-header{
-  background: url(../hinh/anh_kem/anh_kem/background12.jpg) no-repeat center/cover;
+  /* background: url(../hinh/anh_kem/anh_kem/background12.jpg) no-repeat center/cover; */
   background-size: cover;
   background-repeat: no-repeat;
   animation: slide 60s linear infinite;
