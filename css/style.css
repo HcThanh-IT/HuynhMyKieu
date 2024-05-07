@@ -240,6 +240,11 @@ html {
 .button-hong{
   background-color: var(--color-hong);
 }
+.btn{
+  position: absolute;
+  bottom: 10%;
+  left: calc(50% - 70px);
+}
 /* .button {
   width: 200px;
   height: 60px;
