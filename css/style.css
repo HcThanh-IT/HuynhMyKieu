@@ -175,6 +175,15 @@ html {
   background-size: cover;
   background-repeat: no-repeat;
   animation: slide 10s linear infinite; /* Áp dụng animation slide, mỗi vòng 30 giây và lặp vô hạn */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section-one .info-title{
+  font-size: 24px;
+}
+.section-one .info-sub-title{
+  font-size: 72px;
 }
 
 @keyframes slide {
