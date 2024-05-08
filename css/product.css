@@ -58,3 +58,10 @@
 .fa-heart:hover {
   transform: scale(2); /* Phóng to trái tim khi hover */
 }
+.list-one .button{
+  margin-top: 20px;
+  margin-left: calc(50% - 70px);
+}
+.section-five .title{
+  margin-top: 50px;
+}

@@ -3,7 +3,7 @@ const products = [
     id: 1,
     name: "Vanilla Ice Cream",
     price: 99,
-    image: "../hinh/anh_kem/anh_kem/product2.png",
+    image: `../hinh/anh_kem/anh_kem/product2.png`,
   },
   {
     id: 2,
@@ -97,81 +97,94 @@ const products = [
   },
 ];
 
+const productsTwo = [
+  {
+    id: 16,
+    name: "Oreo Ice Cream",
+    price: 99,
+    image: "../hinh/anh_kem/anh_kem/oreo.jpg",
+  },
+  {
+    id: 1,
+    name: "Vanilla Ice Cream",
+    price: 99,
+    image: `../hinh/anh_kem/anh_kem/product2.png`,
+  },
+  {
+    id: 8,
+    name: "Strawberry Ice Cream",
+    price: 99,
+    image: "../hinh/anh_kem/anh_kem/strawberryIcecream.jpg",
+  },
+  {
+    id: 14,
+    name: "Chocolates Ice Cream",
+    price: 99,
+    image: "../hinh/anh_kem/anh_kem/product6.png",
+  },
+];
 const containerOne = document.getElementById("list-product-one");
+const containerTwo = document.getElementById("list-product-two");
 
 const renderProduct = () => {
   let html = "";
+  let productsToShow = products.slice(0, 8); // Chỉ hiển thị 8 sản phẩm ban đầu
 
-  for (let i = 0; i < products.length && i < 8; i++) {
-    const product = products[i];
-    html += `
-      <div class="product">
-        <div class="product-title">
-          <span><b>$${product.price}</b></span>
-        </div>
-        <div class="product-img">
-          <img src="${product.image}" alt="" />
-        </div>
-        <div class="product-name">
-          <b>${product.name}</b>
-        </div>
-        <div class="btn">
-          <button class="button button-xanh">Order Now</button>
-          <span class="order-now">
-            <div class="hearts" data-product-index="${i}">
-              <i class="fa-regular fa-heart heart" style="cursor: pointer;" data-product="${product.name}" data-selected="false"></i>
-              <i class="fa-regular fa-heart heart" style="cursor: pointer;" data-product="${product.name}" data-selected="false"></i>
-              <i class="fa-regular fa-heart heart" style="cursor: pointer;" data-product="${product.name}" data-selected="false"></i>
-              <i class="fa-regular fa-heart heart" style="cursor: pointer;" data-product="${product.name}" data-selected="false"></i>
-              <i class="fa-regular fa-heart heart" style="cursor: pointer;" data-product="${product.name}" data-selected="false"></i>
-            </div>
-          </span>
-        </div>
-      </div>
-    `;
-  }
+  productsToShow.forEach((product, index) => {
+    html += `<div class="product">
+                  <div class="product-title">
+                      <span><b>$${product.price}</b></span>
+                  </div>
+                  <div class="product-img">
+                      <img src=${product.image} alt="" />
+                  </div>
+                  <div class="product-name">
+                      <b>${product.name}</b>
+                  </div>
+                  <div class="btn">
+                      <button class="button button-xanh">Order Now</button>
+                      <span class="order-now">
+                        <div class="hearts" data-product-index="${index}">
+                            <i class="fa-regular fa-heart heart" style="cursor: pointer;" data-product="${product.name}" data-selected="false" ></i>
+                            <i class="fa-regular fa-heart heart" style="cursor: pointer;" data-product="${product.name}" data-selected="false" ></i>
+                            <i class="fa-regular fa-heart heart" style="cursor: pointer;" data-product="${product.name}" data-selected="false" ></i>
+                            <i class="fa-regular fa-heart heart" style="cursor: pointer;" data-product="${product.name}" data-selected="false" ></i>
+                            <i class="fa-regular fa-heart heart" style="cursor: pointer;" data-product="${product.name}" data-selected="false" ></i>
+                        </div>
+                      </span>
+                  </div>
+              </div>`;
+  });
+
+  let html2 = "";
+  productsTwo.forEach((product, index) => {
+    html2 += `<div class="product">
+                  <div class="product-title">
+                      <span><b>$${product.price}</b></span>
+                  </div>
+                  <div class="product-img">
+                      <img src=${product.image} alt="" />
+                  </div>
+                  <div class="product-name">
+                      <b>${product.name}</b>
+                  </div>
+                  <div class="btn">
+                      <button class="button button-xanh">Order Now</button>
+                      <span class="order-now">
+                        <div class="hearts" data-product-index="${index}">
+                            <i class="fa-regular fa-heart heart" style="cursor: pointer;" data-product="${product.name}" data-selected="false" ></i>
+                            <i class="fa-regular fa-heart heart" style="cursor: pointer;" data-product="${product.name}" data-selected="false" ></i>
+                            <i class="fa-regular fa-heart heart" style="cursor: pointer;" data-product="${product.name}" data-selected="false" ></i>
+                            <i class="fa-regular fa-heart heart" style="cursor: pointer;" data-product="${product.name}" data-selected="false" ></i>
+                            <i class="fa-regular fa-heart heart" style="cursor: pointer;" data-product="${product.name}" data-selected="false" ></i>
+                        </div>
+                      </span>
+                  </div>
+              </div>`;
+  });
 
   containerOne.innerHTML = html;
-
-  if (products.length > 8) {
-    const loadMoreBtn = document.getElementById("allProduct");
-
-    loadMoreBtn.addEventListener("click", () => {
-      html = "";
-      products.forEach((product, index) => {
-        html += `
-          <div class="product">
-            <div class="product-title">
-              <span><b>$${product.price}</b></span>
-            </div>
-            <div class="product-img">
-              <img src="${product.image}" alt="" />
-            </div>
-            <div class="product-name">
-              <b>${product.name}</b>
-            </div>
-            <div class="btn">
-              <button class="button button-xanh">Order Now</button>
-              <span class="order-now">
-                <div class="hearts" data-product-index="${index}">
-                  <i class="fa-regular fa-heart heart" style="cursor: pointer;" data-product="${product.name}" data-selected="false"></i>
-                  <i class="fa-regular fa-heart heart" style="cursor: pointer;" data-product="${product.name}" data-selected="false"></i>
-                  <i class="fa-regular fa-heart heart" style="cursor: pointer;" data-product="${product.name}" data-selected="false"></i>
-                  <i class="fa-regular fa-heart heart" style="cursor: pointer;" data-product="${product.name}" data-selected="false"></i>
-                  <i class="fa-regular fa-heart heart" style="cursor: pointer;" data-product="${product.name}" data-selected="false"></i>
-                </div>
-              </span>
-            </div>
-          </div>
-        `;
-      });
-
-      containerOne.innerHTML = html;
-      loadMoreBtn.remove();
-    });
-
-    containerOne.appendChild(loadMoreBtn);
-  }
+  containerTwo.innerHTML = html2;
 
   const hearts = document.querySelectorAll(".heart");
   hearts.forEach((heart) => {
@@ -202,6 +215,37 @@ const renderProduct = () => {
       }
     });
   });
+  const loadMoreBtn = document.getElementById("allProduct");
+  loadMoreBtn.addEventListener("click", () => {
+    html = "";
+    products.forEach((product, index) => {
+      html += `<div class="product">
+                  <div class="product-title">
+                      <span><b>$${product.price}</b></span>
+                  </div>
+                  <div class="product-img">
+                      <img src=${product.image} alt="" />
+                  </div>
+                  <div class="product-name">
+                      <b>${product.name}</b>
+                  </div>
+                  <div class="btn">
+                      <button class="button button-xanh">Order Now</button>
+                      <span class="order-now">
+                        <div class="hearts" data-product-index="${index}">
+                            <i class="fa-regular fa-heart heart" style="cursor: pointer;" data-product="${product.name}" data-selected="false" ></i>
+                            <i class="fa-regular fa-heart heart" style="cursor: pointer;" data-product="${product.name}" data-selected="false" ></i>
+                            <i class="fa-regular fa-heart heart" style="cursor: pointer;" data-product="${product.name}" data-selected="false" ></i>
+                            <i class="fa-regular fa-heart heart" style="cursor: pointer;" data-product="${product.name}" data-selected="false" ></i>
+                            <i class="fa-regular fa-heart heart" style="cursor: pointer;" data-product="${product.name}" data-selected="false" ></i>
+                        </div>
+                      </span>
+                  </div>
+              </div>`;
+    });
+    containerOne.innerHTML = html;
+    loadMoreBtn.remove(); // Loại bỏ nút "Xem thêm" sau khi đã hiển thị tất cả sản phẩm
+  }); 
 };
 
 renderProduct();

@@ -68,3 +68,16 @@ prevBtn.addEventListener("click", function () {
 
 // Mặc định, hiển thị nhóm sản phẩm đầu tiên
 showCategory(currentCategoryIndex);
+document.addEventListener("DOMContentLoaded", function() {
+  // In toàn bộ dữ liệu trong localStorage khi trang đã tải hoàn tất
+  for (let i = 0; i < localStorage.length; i++) {
+      let key = localStorage.key(i);
+      let value = localStorage.getItem(key);
+      console.log("Key:", key, "Value:", value);
+  }
+
+  // Tiếp tục xử lý đăng nhập và đăng ký như bạn đã viết ở trên
+  // ...
+
+});
+
