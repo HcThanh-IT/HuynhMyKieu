@@ -304,6 +304,8 @@ html {
   width: 35%;
   text-align: left;
   position: relative;
+  text-align: justify;
+  text-align-last: left;
 }
 .content-trai .title {
   margin-bottom: 30px;
@@ -312,6 +314,8 @@ html {
   width: 35%;
   text-align: left;
   position: relative;
+  text-align: justify;
+  text-align-last: left;
 }
 .content-phai .title {
   margin-bottom: 30px;
@@ -550,6 +554,8 @@ html {
 .des1,
 .des2 {
   margin-bottom: 30px;
+  text-align: justify;
+  text-align-last: left;
 }
 
 .des1 span,
