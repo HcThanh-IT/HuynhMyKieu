@@ -1,71 +1,63 @@
-const containerOne = document.getElementById("list-product-one");
-const containerTwo = document.getElementById("list-product-two");
 
-const renderProduct = () => {
-  let html = "";
-  let productsToShow = products.slice(0, 8); // Chỉ hiển thị 8 sản phẩm ban đầu
+let btnLogin = document.getElementById("btn-submitLogin");
+let btnRegister = document.getElementById("btn-submitSignup");
+let loginEmail = document.getElementById("loginEmail");
+let loginPassword = document.getElementById("loginPassWord");
+let registerName = document.getElementById("txtName");
+let registeEmail = document.getElementById("txtEmail");
+let registerPassword = document.getElementById("txtPassWord");
 
-  productsToShow.forEach((product, index) => {
-    html += `<div class="product">
-                  <div class="product-title">
-                      <span><b>$${product.price}</b></span>
-                  </div>
-                  <div class="product-img">
-                      <img src=${product.image} alt="" />
-                  </div>
-                  <div class="product-name">
-                      <b>${product.name}</b>
-                  </div>
-                  <div class="btn">
-                      <button class="button button-xanh">Order Now</button>
-                      <span class="order-now">
-                        <div class="hearts" data-product-index="${index}">
-                            <i class="fa-regular fa-heart heart" style="cursor: pointer;" data-product="${product.name}" data-selected="false" ></i>
-                            <i class="fa-regular fa-heart heart" style="cursor: pointer;" data-product="${product.name}" data-selected="false" ></i>
-                            <i class="fa-regular fa-heart heart" style="cursor: pointer;" data-product="${product.name}" data-selected="false" ></i>
-                            <i class="fa-regular fa-heart heart" style="cursor: pointer;" data-product="${product.name}" data-selected="false" ></i>
-                            <i class="fa-regular fa-heart heart" style="cursor: pointer;" data-product="${product.name}" data-selected="false" ></i>
-                        </div>
-                      </span>
-                  </div>
-              </div>`;
-  });
+btnRegister.addEventListener("click", function (event) {
+  event.preventDefault();
+  let listUser = [];
+  let email = registeEmail.value;
+  let password = registerPassword.value;
+  let name = registerName.value;
+  let user = {
+    email,
+    password,
+    name,
+  };
+  listUser.push(user);
+  localStorage.setItem("users", JSON.stringify(listUser));
+  alert("Đăng ký thành công!");
+  window.location.href = "../index.html";
+});
 
-  containerOne.innerHTML = html;
+btnLogin.addEventListener("click", function (event) {
+  event.preventDefault();
+  let users = JSON.parse(localStorage.getItem("users"));
+  let email = loginEmail.value;
+  let password = loginPassword.value;
 
-  const loadMoreBtn = document.getElementById("allProduct");
-  loadMoreBtn.addEventListener("click", () => {
-    html = "";
-    products.forEach((product, index) => {
-      html += `<div class="product">
-                  <div class="product-title">
-                      <span><b>$${product.price}</b></span>
-                  </div>
-                  <div class="product-img">
-                      <img src=${product.image} alt="" />
-                  </div>
-                  <div class="product-name">
-                      <b>${product.name}</b>
-                  </div>
-                  <div class="btn">
-                      <button class="button button-xanh">Order Now</button>
-                      <span class="order-now">
-                        <div class="hearts" data-product-index="${index}">
-                            <i class="fa-regular fa-heart heart" style="cursor: pointer;" data-product="${product.name}" data-selected="false" ></i>
-                            <i class="fa-regular fa-heart heart" style="cursor: pointer;" data-product="${product.name}" data-selected="false" ></i>
-                            <i class="fa-regular fa-heart heart" style="cursor: pointer;" data-product="${product.name}" data-selected="false" ></i>
-                            <i class="fa-regular fa-heart heart" style="cursor: pointer;" data-product="${product.name}" data-selected="false" ></i>
-                            <i class="fa-regular fa-heart heart" style="cursor: pointer;" data-product="${product.name}" data-selected="false" ></i>
-                        </div>
-                      </span>
-                  </div>
-              </div>`;
-    });
-    containerOne.innerHTML = html;
-    loadMoreBtn.remove(); // Loại bỏ nút "Xem thêm" sau khi đã hiển thị tất cả sản phẩm
-  });
-};
+  if (email == "" || password == "") {
+    alert("Vui lòng nhập đủ thông tin!!");
+  }
 
-renderProduct();
+  let user = users.find((user) => user.email === email);
+  localStorage.setItem("user", JSON.stringify(user));
+  if (!user) {
+    alert("Không tìm thấy tài khoản nào có email: ", email);
+  }
+  console.log(email !== user.email || password !== user.password);
+  if (email === user.email || password === user.password) {
+    localStorage.setItem("isLogin", true);
+    alert("Đăng nhập thành công!!");
+    window.location.href = "../index.html";
+  }
+  // Lấy tham chiếu đến nút
+let btnShowLocalStorage = document.getElementById("btnShowLocalStorage");
 
+// Thêm sự kiện click
+btnShowLocalStorage.addEventListener("click", function() {
+    // Lấy tất cả các items từ localStorage
+    const allItems = {...localStorage};
 
+    // In ra tất cả các items
+    console.log("Tất cả các items trong localStorage:");
+    for (let key in allItems) {
+        console.log(`${key}: ${localStorage.getItem(key)}`);
+    }
+});
+
+});
