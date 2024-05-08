@@ -19,7 +19,7 @@
 /* --------------------- */
 
 .section-five {
-  margin-top: 20px; /* Khoảng cách với phần trên */
+  margin-top: 50px; /*Khoảng cách với phần trên*/
   float: left; /* Đẩy sang bên trái */
 }
 
@@ -27,7 +27,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 400px; /* Set height to 100% of the viewport height */
+  /* height: 400px; Set height to 100% of the viewport height */
 }
 
 .title {
