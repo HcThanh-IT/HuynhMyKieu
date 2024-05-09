@@ -16,7 +16,7 @@
   <body>
     <div class="wrapper">
       <div id="header"></div>
-      <!-- <div class="header">
+      <div class="header">
         <header class="header-chinh">
           <div class="header-trai">
             <p><a href="./html/FAQs.html">FAQs</a></p>
@@ -82,7 +82,7 @@
             </ul>
           </div>
         </nav>
-      </div> -->
+      </div>
       <div class="section-one">
         <div class="info">
           <p class="info-title">TRADITIONAL & DELICIOUS</p>
@@ -368,14 +368,4 @@
       </footer>
     </div>
   </body>
-  <script>
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-      if (this.readyState == 4 && this.status == 200) {
-        document.getElementById("header").innerHTML = this.responseText;
-      }
-    };
-    xhttp.open("GET", "html/common/header.html", true);
-    xhttp.send();
-  </script>
 </html>
