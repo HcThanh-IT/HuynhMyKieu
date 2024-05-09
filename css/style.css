@@ -233,8 +233,10 @@ html {
   border: none;
   border-radius: 60px;
   cursor: pointer;
+  text-align: center;
 }
 .button-xanh{
+  text-align: center;
   background-color: var(--color-xanh);
 }
 .button-hong{
@@ -302,8 +304,10 @@ html {
 }
 .content-trai {
   width: 35%;
-  text-align: left;
   position: relative;
+  
+}
+.content-trai p{
   text-align: justify;
   text-align-last: left;
 }
@@ -312,8 +316,10 @@ html {
 }
 .content-phai {
   width: 35%;
-  text-align: left;
   position: relative;
+  
+}
+.content-phai p{
   text-align: justify;
   text-align-last: left;
 }
