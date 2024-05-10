@@ -273,7 +273,7 @@
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
     padding: 15px;
     box-sizing: border-box;
-    border-radius: 5%;
+    border-radius: 7px;
   }
   .service-one .column img{
     width: 100px;
