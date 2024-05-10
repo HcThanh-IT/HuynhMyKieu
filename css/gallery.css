@@ -199,7 +199,7 @@ img {
 /* CSS cho phần tử nav */
 /* CSS để đẩy phần tử nav lên trên */
 .gallery-nav {
-  margin-top: -80px; /* Đẩy phần tử này lên trên 10px */
+  /* margin-top: -80px; Đẩy phần tử này lên trên 10px */
 }
 
 .image-gallery {
