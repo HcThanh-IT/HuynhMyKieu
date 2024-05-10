@@ -59,8 +59,10 @@
   transform: scale(2); /* Phóng to trái tim khi hover */
 }
 .list-one .button{
-  margin-top: 20px;
   margin: auto;
+}
+.btn .button-xanh{
+  margin-top: 25px;
 }
 .list-one .button-hong{
   margin-top: 20px;
