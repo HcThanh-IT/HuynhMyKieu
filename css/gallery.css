@@ -19,7 +19,7 @@
 /* --------------------- */
 
 .section-five {
-  margin-top: 50px; /*Khoảng cách với phần trên*/
+  /* margin-top: 50px; Khoảng cách với phần trên */
   float: left; /* Đẩy sang bên trái */
 }
 
@@ -31,6 +31,7 @@
 }
 
 .title {
+  margin-top: 50px;
   text-align: center;
 }
 /* CSS */
@@ -198,7 +199,7 @@ img {
 /* CSS cho phần tử nav */
 /* CSS để đẩy phần tử nav lên trên */
 .gallery-nav {
-  margin-top: -100px; /* Đẩy phần tử này lên trên 10px */
+  margin-top: -80px; /* Đẩy phần tử này lên trên 10px */
 }
 
 .image-gallery {

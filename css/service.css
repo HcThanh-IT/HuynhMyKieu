@@ -15,9 +15,22 @@
   }
   
   /*service nội dung-------------------*/
+  .container{
+    position: relative;
+  }
   .container .title{
-    margin-top: 20px;
+    margin-top: 50px;
     text-align: center;
+  }
+  .container .title::after{
+    margin-top: -10.5px;
+    position: absolute;
+    content: "";
+    top: 0;
+    left: calc(50% - 50px);
+    width: 100px;
+    height: 5px;
+    background: var(--color-hong);
   }
   /*
   .service-one {

@@ -60,8 +60,13 @@
 }
 .list-one .button{
   margin-top: 20px;
+  margin: auto;
+}
+.list-one .button-hong{
+  margin-top: 20px;
   margin-left: calc(50% - 70px);
 }
+
 .section-five .title{
   margin-top: 50px;
 }

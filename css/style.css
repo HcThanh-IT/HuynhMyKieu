@@ -615,6 +615,7 @@ html {
   height: 357px;
   background-color: white;
   border-radius: 5px;
+  margin: auto;
 }
 .product:hover {
   background-color: var(--color-xanh);
@@ -641,6 +642,11 @@ html {
 .section-five .title {
   position: relative;
 }
+.section-five .title span{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
 /* tạo ra lớp giả after */
 /* position absolute là để phần tử có thể di chuyển , phần gốc là thẻ có chứa position relative */
 .section-five .title::after {
@@ -648,7 +654,7 @@ html {
   position: absolute;
   content: "";
   top: 0;
-  left: 0;
+  left: calc(50% - 50px);
   width: 100px;
   height: 5px;
   background: var(--color-hong);
