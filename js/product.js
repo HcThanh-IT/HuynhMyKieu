@@ -97,34 +97,9 @@ const products = [
   },
 ];
 
-const productsTwo = [
-  {
-    id: 16,
-    name: "Oreo Ice Cream",
-    price: 99,
-    image: "../hinh/anh_kem/anh_kem/oreo.jpg",
-  },
-  {
-    id: 1,
-    name: "Vanilla Ice Cream",
-    price: 99,
-    image: `../hinh/anh_kem/anh_kem/product2.png`,
-  },
-  {
-    id: 8,
-    name: "Strawberry Ice Cream",
-    price: 99,
-    image: "../hinh/anh_kem/anh_kem/strawberryIcecream.jpg",
-  },
-  {
-    id: 14,
-    name: "Chocolates Ice Cream",
-    price: 99,
-    image: "../hinh/anh_kem/anh_kem/product6.png",
-  },
-];
+
 const containerOne = document.getElementById("list-product-one");
-const containerTwo = document.getElementById("list-product-two");
+
 
 const renderProduct = () => {
   let html = "";

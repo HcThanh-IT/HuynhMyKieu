@@ -234,6 +234,19 @@
           </div>
         </div>
       </div>
+      <div class="container" style="margin-top: 50px;">
+        <div class="section-five" style="text-align: center;">
+          <div class="title">
+            <span>
+              Best Prices We Offer For <br/>
+              Ice Cream Lovers
+            </span>
+          </div>
+          <div class="list-two">
+            <ul class="list-product-one" id="list-product-two"></ul>
+          </div>
+        </div>
+      </div>
       <div class="container">
         <div class="section-six">
           <div class="title">
@@ -368,4 +381,127 @@
       </footer>
     </div>
   </body>
+  <script>
+    const productsTwo = [
+  {
+    id: 16,
+    name: "Oreo Ice Cream",
+    price: 99,
+    image: "../hinh/anh_kem/anh_kem/oreo.jpg",
+  },
+  {
+    id: 1,
+    name: "Vanilla Ice Cream",
+    price: 99,
+    image: `../hinh/anh_kem/anh_kem/product2.png`,
+  },
+  {
+    id: 8,
+    name: "Strawberry Ice Cream",
+    price: 99,
+    image: "../hinh/anh_kem/anh_kem/strawberryIcecream.jpg",
+  },
+  {
+    id: 14,
+    name: "Chocolates Ice Cream",
+    price: 99,
+    image: "../hinh/anh_kem/anh_kem/product6.png",
+  },
+];
+const containerTwo = document.getElementById("list-product-two");
+const renderProduct = () => {
+
+  let html2 = "";
+  productsTwo.forEach((product, index) => {
+    html2 += `<div class="product">
+                  <div class="product-title">
+                      <span><b>$${product.price}</b></span>
+                  </div>
+                  <div class="product-img">
+                      <img src=${product.image} alt="" />
+                  </div>
+                  <div class="product-name">
+                      <b>${product.name}</b>
+                  </div>
+                  <div class="btn">
+                      <button class="button button-xanh" style="margin-top: 20px;">Order Now</button>
+                      <span class="order-now">
+                        <div class="hearts" data-product-index="${index}">
+                            <i class="fa-regular fa-heart heart" style="cursor: pointer;" data-product="${product.name}" data-selected="false" ></i>
+                            <i class="fa-regular fa-heart heart" style="cursor: pointer;" data-product="${product.name}" data-selected="false" ></i>
+                            <i class="fa-regular fa-heart heart" style="cursor: pointer;" data-product="${product.name}" data-selected="false" ></i>
+                            <i class="fa-regular fa-heart heart" style="cursor: pointer;" data-product="${product.name}" data-selected="false" ></i>
+                            <i class="fa-regular fa-heart heart" style="cursor: pointer;" data-product="${product.name}" data-selected="false" ></i>
+                        </div>
+                      </span>
+                  </div>
+              </div>`;
+  });
+
+  containerTwo.innerHTML = html2;
+
+  const hearts = document.querySelectorAll(".heart");
+  hearts.forEach((heart) => {
+    heart.addEventListener("click", () => {
+      const isLogin = JSON.parse(localStorage.getItem("isLogin"));
+      if (!isLogin) {
+        alert("Vui lòng đăng nhập");
+        return;
+      }
+      const productIndex = heart.parentNode.getAttribute("data-product-index");
+      const productHearts = document.querySelectorAll(
+        `.hearts[data-product-index="${productIndex}"] .heart`
+      );
+      const heartIndex = Array.from(productHearts).indexOf(heart);
+
+      heart.classList.toggle("fa-solid");
+
+      for (let i = 0; i <= heartIndex; i++) {
+        const currentHeart = productHearts[i];
+        currentHeart.setAttribute("data-selected", "true");
+        currentHeart.classList.add("fa-solid");
+      }
+
+      for (let i = heartIndex + 1; i < productHearts.length; i++) {
+        const currentHeart = productHearts[i];
+        currentHeart.setAttribute("data-selected", "false");
+        currentHeart.classList.remove("fa-solid");
+      }
+    });
+  });
+  const loadMoreBtn = document.getElementById("allProduct");
+  loadMoreBtn.addEventListener("click", () => {
+    html = "";
+    products.forEach((product, index) => {
+      html += `<div class="product">
+                  <div class="product-title">
+                      <span><b>$${product.price}</b></span>
+                  </div>
+                  <div class="product-img">
+                      <img src=${product.image} alt="" />
+                  </div>
+                  <div class="product-name">
+                      <b>${product.name}</b>
+                  </div>
+                  <div class="btn">
+                      <button class="button button-xanh">Order Now</button>
+                      <span class="order-now">
+                        <div class="hearts" data-product-index="${index}">
+                            <i class="fa-regular fa-heart heart" style="cursor: pointer;" data-product="${product.name}" data-selected="false" ></i>
+                            <i class="fa-regular fa-heart heart" style="cursor: pointer;" data-product="${product.name}" data-selected="false" ></i>
+                            <i class="fa-regular fa-heart heart" style="cursor: pointer;" data-product="${product.name}" data-selected="false" ></i>
+                            <i class="fa-regular fa-heart heart" style="cursor: pointer;" data-product="${product.name}" data-selected="false" ></i>
+                            <i class="fa-regular fa-heart heart" style="cursor: pointer;" data-product="${product.name}" data-selected="false" ></i>
+                        </div>
+                      </span>
+                  </div>
+              </div>`;
+    });
+    containerOne.innerHTML = html;
+    loadMoreBtn.remove(); // Loại bỏ nút "Xem thêm" sau khi đã hiển thị tất cả sản phẩm
+  }); 
+};
+
+renderProduct();
+  </script>
 </html>
