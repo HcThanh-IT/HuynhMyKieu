@@ -131,35 +131,8 @@ const renderProduct = () => {
               </div>`;
   });
 
-  let html2 = "";
-  productsTwo.forEach((product, index) => {
-    html2 += `<div class="product">
-                  <div class="product-title">
-                      <span><b>$${product.price}</b></span>
-                  </div>
-                  <div class="product-img">
-                      <img src=${product.image} alt="" />
-                  </div>
-                  <div class="product-name">
-                      <b>${product.name}</b>
-                  </div>
-                  <div class="btn">
-                      <button class="button button-xanh">Order Now</button>
-                      <span class="order-now">
-                        <div class="hearts" data-product-index="${index}">
-                            <i class="fa-regular fa-heart heart" style="cursor: pointer;" data-product="${product.name}" data-selected="false" ></i>
-                            <i class="fa-regular fa-heart heart" style="cursor: pointer;" data-product="${product.name}" data-selected="false" ></i>
-                            <i class="fa-regular fa-heart heart" style="cursor: pointer;" data-product="${product.name}" data-selected="false" ></i>
-                            <i class="fa-regular fa-heart heart" style="cursor: pointer;" data-product="${product.name}" data-selected="false" ></i>
-                            <i class="fa-regular fa-heart heart" style="cursor: pointer;" data-product="${product.name}" data-selected="false" ></i>
-                        </div>
-                      </span>
-                  </div>
-              </div>`;
-  });
 
   containerOne.innerHTML = html;
-  containerTwo.innerHTML = html2;
 
   const hearts = document.querySelectorAll(".heart");
   hearts.forEach((heart) => {
