@@ -275,8 +275,10 @@
     box-sizing: border-box;
     border-radius: 7px;
   }
-  .service-one .column img{
-    width: 100px;
+  .column span i{
+    font-size: 50px;
+    color: var(--color-hong);
+    margin-bottom: 10px;
   }
   .column:hover{
     background-color: var(--color-xanh);
