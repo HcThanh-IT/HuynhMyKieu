@@ -243,4 +243,11 @@ img {
   height: 300px; 
   object-fit: cover;
 }
+.featured-news img {
+  transition: transform 0.3s ease-in-out;
+}
 
+.featured-news img:hover {
+  transform: scale(1.1);
+  margin-bottom: 20px;
+}
