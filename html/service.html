@@ -242,36 +242,30 @@
           </form>
         </div>
       </div>
-      <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          const form = document.querySelector("form");
-          form.addEventListener("submit", function (event) {
-            event.preventDefault();
-            const successMessage = document.createElement("p");
-            successMessage.textContent =
-              "You have successfully booked a table!";
-            successMessage.style.color = "green";
-            form.parentNode.insertBefore(successMessage, form.nextSibling);
-            form.reset();
-          });
-        });
-      </script>
+      <div class="hr">
+        <div class="title">
+          <span>
+            Our Clients Say!!!
+          </span>
+        </div>
+      </div>
       <div class="carousel">
-        <div class="carousel-container">
+        
+        <div class="carousel-container" id="carousel-container">
             <div class="carousel-item">
               <span><i class="fa-solid fa-comments"></i></span>
               <div class="content">
                 <p>Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</p>
               </div>
+              <div class="infos">
+                <img src="../hinh/comment/testimonial-1.jpg" alt="">
+                <div class="info">
+                  <div class="name"></div>
+                  <div class="profession"></div>
+                </div>
+              </div>
             </div>
-            <div class="carousel-item">Item 2</div>
-            <div class="carousel-item">Item 3</div>
-            <div class="carousel-item">Item 4</div>
-            <div class="carousel-item">Item 5</div>
-            <div class="carousel-item">Item 6</div>
         </div>
-        <button class="prev-button">&#10094;</button>
-        <button class="next-button">&#10095;</button>
     </div>
 
       <footer class="footer">
@@ -316,82 +310,66 @@
   </body>
   <script>
     document.addEventListener("DOMContentLoaded", function() {
-        const prevButton = document.querySelector(".prev-button");
-        const nextButton = document.querySelector(".next-button");
-        const container = document.querySelector(".carousel-container");
-        const items = document.querySelectorAll(".carousel-item");
-        const itemWidth = 420; // Chiều rộng cố định của mỗi item là 250px
-        const visibleItems = 3; // Số lượng item hiển thị trên màn hình
-        let currentIndex = Math.floor(items.length / 2) - Math.floor(visibleItems / 2);
-        let intervalId;
+    const container = document.querySelector(".carousel-container");
+    const items = document.querySelectorAll(".carousel-item");
+    const itemWidth = 440;
+    const visibleItems = 3;
+    let currentIndex = Math.floor(items.length / 2) - Math.floor(visibleItems / 2);
+    let intervalId;
 
-        function updateCarousel() {
-            // Tính toán vị trí để hiển thị phần tử active ở giữa
-            const newPosition = -currentIndex * itemWidth;
-            container.style.transform = `translateX(${newPosition}px)`;
-
-            // Xóa lớp active từ tất cả các phần tử
-            items.forEach(function(item) {
-                item.classList.remove("active");
-            });
-
-            // Thêm lớp active cho phần tử hiện tại
-            items[currentIndex + Math.floor(visibleItems / 2)].classList.add("active");
-        }
-
-        function goToIndex(index) {
-            currentIndex = index;
-            updateCarousel();
-        }
-
-        // Tạo sự kiện click cho nút prev
-        prevButton.addEventListener("click", function() {
-            if (currentIndex > 0) {
-                currentIndex--;
-                updateCarousel();
-            }
+    function updateCarousel() {
+        const newPosition = -currentIndex * itemWidth;
+        container.style.transform = `translateX(${newPosition}px)`;
+        items.forEach(function(item) {
+            item.classList.remove("active");
         });
+        items[currentIndex + Math.floor(visibleItems / 2)].classList.add("active");
+    }
 
-        // Tạo sự kiện click cho nút next
-        nextButton.addEventListener("click", function() {
+    function goToIndex(index) {
+        currentIndex = index;
+        updateCarousel();
+    }
+
+    items.forEach(function(item, index) {
+        item.addEventListener("click", function() {
+            goToIndex(index - Math.floor(visibleItems / 2));
+        });
+    });
+
+    function startAutoSlide() {
+        intervalId = setInterval(function() {
             if (currentIndex < items.length - visibleItems) {
                 currentIndex++;
                 updateCarousel();
+            } else {
+                currentIndex = 0;
+                updateCarousel();
             }
-        });
+        }, 1500);
+    }
 
-        // Di chuyển tới item khi được click
-        items.forEach(function(item, index) {
-            item.addEventListener("click", function() {
-                goToIndex(index - Math.floor(visibleItems / 2));
-            });
-        });
+    startAutoSlide();
 
-        // Tự động chạy carousel
-        function startAutoSlide() {
-            intervalId = setInterval(function() {
-                if (currentIndex < items.length - visibleItems) {
-                    currentIndex++;
-                    updateCarousel();
-                } else {
-                    currentIndex = 0;
-                    updateCarousel();
-                }
-            }, 3000); // 3 giây
-        }
+    function stopAutoSlide() {
+        clearInterval(intervalId);
+    }
 
-        // Bắt đầu tự động chạy khi trang được tải
-        startAutoSlide();
-
-        // Dừng tự động chạy khi người dùng tương tác với carousel
-        function stopAutoSlide() {
-            clearInterval(intervalId);
-        }
-
-        // Bắt đầu tự động chạy lại sau khi tương tác
-        container.addEventListener("mouseenter", stopAutoSlide);
-        container.addEventListener("mouseleave", startAutoSlide);
+});
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector("form");
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      const successMessage = document.createElement("p");
+      successMessage.textContent =
+        "You have successfully booked a table!";
+      successMessage.style.color = "green";
+      form.parentNode.insertBefore(successMessage, form.nextSibling);
+      form.reset();
     });
+  });
 </script>
   <script>
     var xhttp = new XMLHttpRequest();

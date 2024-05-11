@@ -302,9 +302,28 @@
   
   .carousel {
     position: relative;
-    width: 1260px; /* Thay đổi kích thước của carousel thành 1110px */
+    width: 1320px; /* Thay đổi kích thước của carousel thành 1110px */
     overflow: hidden;
     margin: auto; /* Để canh giữa carousel */
+}
+
+.hr{
+  position: relative;
+}
+.hr .title{
+  margin-top: 50px;
+  text-align: center;
+  font-weight: 600;
+}
+.hr .title::after{
+  margin-top: -10.5px;
+  position: absolute;
+  content: "";
+  top: 0;
+  left: calc(50% - 50px);
+  width: 100px;
+  height: 5px;
+  background: var(--color-hong);
 }
 
 .carousel-container {
@@ -315,29 +334,32 @@
 /* Tính toán kích thước của mỗi item */
 .carousel-item {
     flex: 0 0 400px; /* Chiều rộng cố định của mỗi item */
+    margin: 10px;
     padding: 10px;
+    border: 1px solid var(--color-hong);
 }
-
-.prev-button, .next-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
+.carousel-item i{
+  font-size: 40px;
+  margin-bottom: 10px;
 }
-
-.prev-button {
-    left: 0;
+.carousel-item .content p{
+  height: 125px;
 }
-
-.next-button {
-    right: 0;
+.carousel-item .infors{
+  display: flex;
+}
+.carousel-item .infors img{
+  border-radius: 50%;
+}
+.carousel-item .infors .infor{
+  margin-left: 20px;
 }
 
 /* Định dạng cho phần tử active */
 .carousel-item.active {
-    background-color: var(--color-hong);
+  background-color: var(--color-hong);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Thay đổi các giá trị để điều chỉnh bóng */
+}
+.carousel-item.active i{
+  color: #fff;
 }

@@ -67,3 +67,67 @@ const renderService = () => {
 
 renderService();
 
+
+const comments = [
+  {
+    id: 1,
+    content: "The ice cream is absolutely delicious! It's rich, fragrant, and melts in your mouth perfectly. Every scoop of ice cream brings a wonderful taste experience.",
+    image: "testimonial-1.jpg",
+    name:"Alice",
+    profession:"Teacher",
+  },
+  {
+      id: 2,
+      content: "The ice cream has a very natural flavor, not too sweet or fatty. I especially like the chocolate ice cream with strawberries.",
+      image: "testimonial-2.jpg",
+      name:"John",
+      profession:"Software Developer",
+    },
+    {
+      id: 3,
+      content: "Ice cream has a variety of flavors to choose from, from traditional ice cream flavors like vanilla, chocolate, strawberry to unique ice cream flavors like [name of unique ice cream flavor",
+      image: "testimonial-4.jpg",
+      name:"Mia San",
+      profession:"Mechanical Engineer",
+    },
+    {
+      id: 4,
+      content: "Ice cream is made from fresh, quality ingredients. I can feel the freshness in every scoop of ice cream.",
+      image: "testimonial-3.jpg",
+      name:"David",
+      profession:"Sales Representative",
+    },
+    {
+      id: 5,
+      content: "The ice cream shop has a beautiful, airy, clean space. The service staff is enthusiastic and attentive.",
+      image: "testimonial-1.jpg",
+      name:"Mary",
+      profession:"Project Manager",
+    },
+];
+
+const list_comments = document.getElementById("carousel-container");
+
+const renderComment = () => {
+  let html = "";
+  comments.forEach((comment, index) => {
+      html += `
+      <div class="carousel-item">
+        <span><i class="fa-solid fa-comments"></i></span>
+        <div class="content">
+          <p>${comment.content}</p>
+        </div>
+        <div class="infors">
+          <img src="../hinh/comment/${comment.image}" alt="">
+          <div class="infor">
+            <div class="name"><h3>${comment.name}</h3></div>
+            <div class="profession"><p>${comment.profession}</p></div>
+          </div>
+        </div>
+      </div>`;
+    });
+    list_comments.innerHTML = html;
+};
+
+renderComment();
+
