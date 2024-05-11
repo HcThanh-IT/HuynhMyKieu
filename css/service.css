@@ -300,5 +300,44 @@
     }
   }
   
-  
-  
+  .carousel {
+    position: relative;
+    width: 1260px; /* Thay đổi kích thước của carousel thành 1110px */
+    overflow: hidden;
+    margin: auto; /* Để canh giữa carousel */
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+/* Tính toán kích thước của mỗi item */
+.carousel-item {
+    flex: 0 0 400px; /* Chiều rộng cố định của mỗi item */
+    padding: 10px;
+}
+
+.prev-button, .next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.prev-button {
+    left: 0;
+}
+
+.next-button {
+    right: 0;
+}
+
+/* Định dạng cho phần tử active */
+.carousel-item.active {
+    background-color: var(--color-hong);
+}
